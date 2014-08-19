@@ -1,0 +1,13 @@
+MANIFEST
+dist
+build
+*-info
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn
+db.sqlite3
+*.DS_Store
+*~
+~*
