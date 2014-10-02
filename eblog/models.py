@@ -9,8 +9,8 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
-from blog.managers import CategoryOnlineManager
-from blog.managers import EntryOnlineManager
+from managers import CategoryOnlineManager
+from managers import EntryOnlineManager
 
 from django.core.urlresolvers import reverse
 

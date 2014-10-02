@@ -1,8 +1,8 @@
 from django.conf.urls import *
 from django.views.generic import TemplateView
-from blog.views import *
-from blog.models import Entry
-from blog.models import Category
+from views import *
+from models import Entry
+from models import Category
 
 
 urlpatterns = patterns('',
