@@ -1,0 +1,141 @@
+/* ================================
+#Author: Aurelien MARTIN
+#Minimalist css for django-egallery
+===================================
+
+Colors
+-------
+
+Tips: merge all id that own the same aspect
+      
+=========================*/
+
+/* resets and overrrides 
+==========*/
+
+
+/*linkgs & type
+===========*/
+body {
+font-family: "Lucida Sans", Verdana, sans-serif;
+font-size: 100%;
+}
+
+a:link, a:active, a:visited , { text-decoration: none; }
+a:hover { color: #999, text-decoration: underline;}
+
+h1 { } 
+h1 a { } 
+h1 a:hover { } 
+
+h2 { } 
+h2 a { } 
+h2 a:hover { } 
+
+h3 { } 
+h3 a { } 
+h3 a:hover { } 
+
+
+/* Styles */
+
+
+/* layout
+==========*/
+/*img { margin: 2px 3px 3px 2px; 
+#  outline: 1px solid rgba(0, 0, 0, 0.1);
+#  outline-offset: -1px;
+#}*/
+
+#wrapper { width : 1024px; margin: auto;} 
+#header { font-size: 3em; } 
+#nav { } 
+#page { } 
+#footer { } 
+
+/* callout boxes */
+
+/* Form element  */
+
+label { } 
+input { } 
+input.button { } 
+~                                                           
+
+/* media querry 
+================*/
+
+/*
+* Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+*/
+ 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+
+#wrapper { width : 100%; margin: auto;} 
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+
+#wrapper { width : 100%; margin: auto;} 
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+
+#wrapper { width : 80%; margin: auto;} 
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+
+#wrapper { width : 80%; margin: auto;} 
+}
+ 
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+

@@ -1,0 +1,21 @@
+{% extends "eblog/base.html" %}
+{% block title %}{{ year | date:"Y" }}{% endblock title %}
+{% block head %}{% include "eblog/block_head.html" %}{% endblock head %}
+{% block content %}
+<h2>{{ year |date:"Y"}}</h2>
+{% if object_list  %}
+<ul>
+    {% for entry in object_list %}
+    <li>
+        <a href="{{ entry.get_absolute_url }}">{{ entry.title|title }}</a> |
+        <small>
+        {{ entry.publication_date|date:"Y/m/d" }} -
+        <a href="{{ entry.category.get_absolute_url }}">{{ entry.category.name }}</a>
+        </small>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No entry</p>
+{% endif %}
+{% endblock content %}

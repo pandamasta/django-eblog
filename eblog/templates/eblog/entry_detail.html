@@ -1,0 +1,17 @@
+{% extends "eblog/base.html" %}
+{% block title %}{{ article.title }}{% endblock title %}
+{% block content %}
+{% include "eblog/block_head.html" %}
+    <h1>{{ article.title }}</h1>
+<div class="entry">
+    <p class="entry-meta">
+        {{ object.publication_date|date:"Y/m/d @ H:i:s" }} 
+        <a href="{{ object.category.get_absolute_url }}">{{ object.category.name|title}}</a>
+    </p>
+ 
+   <div class="entry-body">
+        {{ object.body|safe }}
+    </div>
+</div>
+{% endblock  %}
+
