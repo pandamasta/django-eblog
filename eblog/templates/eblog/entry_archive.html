@@ -1,24 +1,23 @@
 {% extends "eblog/base.html" %}
 {% load i18n %}
 {% block title %}Archives{% endblock title %}
-{% block head %}{% include "eblog/block_head.html" %}{% endblock head %}
 {% block content %}
-<h4>{% trans "Latest entries" %}</h4>
-{% if latest %}
-<ul>
-    {% for entry in latest %}
-    <li>
-        <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a> |
-        <small>
-        {{ entry.publication_date|date:"Y/m/d @ H:i:s" }} -
-        <a href="{{ entry.category.get_absolute_url }}">{{ entry.category.name | title}}</a>
-        </small>
-    </li>
-    {% endfor %}
-</ul>
-    </div>
-{% else %}
-    <p><strong>{% trans "No entry yet" %}.</strong></p>
-{% endif %}
+            <h4>{% trans "Latest entries" %}</h4>
+            {% if latest %}
+            <ul>
+                {% for entry in latest %}
+                <li>
+                    <a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a> |
+                    <small>
+                    {{ entry.publication_date|date:"Y/m/d @ H:i:s" }} -
+                    <a href="{{ entry.category.get_absolute_url }}">{{ entry.category.name | title}}</a>
+                    </small>
+                </li>
+                {% endfor %}
+            </ul>
+                </div>
+            {% else %}
+                <p><strong>{% trans "No entry yet" %}.</strong></p>
+            {% endif %}
 {% endblock %}
 
