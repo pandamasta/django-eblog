@@ -3,7 +3,15 @@ from django.contrib import admin
 from models import Category
 from models import Entry
 
-from django_summernote.admin import SummernoteModelAdmin
+from django import forms
+from redactor.widgets import RedactorEditor
+
+class EntryAdminForm(forms.ModelForm):
+    class Meta:
+        model = Entry
+        widgets = {
+           'body': RedactorEditor()
+        }
 
 class CategoryAdmin(admin.ModelAdmin):
     """
@@ -16,9 +24,7 @@ class CategoryAdmin(admin.ModelAdmin):
     save_on_top = True
     prepopulated_fields = {'slug': ('name',)}
 
-
-#class EntryAdmin(admin.ModelAdmin):
-class EntryAdmin(SummernoteModelAdmin):
+class EntryAdmin(admin.ModelAdmin):
     """
     Administration interface options of ``Entry`` model.
     """
@@ -28,6 +34,7 @@ class EntryAdmin(SummernoteModelAdmin):
     save_on_top = True
     radio_fields = {'status': admin.VERTICAL}
     prepopulated_fields = {'slug': ('title',)}
+    form = EntryAdminForm
 
 
 admin.site.register(Category, CategoryAdmin)
